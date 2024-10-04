@@ -1,0 +1,45 @@
+@use "../../../assets/styles/variables.scss";
+
+.contenedor-general{
+    margin-top: 90px;
+}
+
+form, form div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px;
+    input {
+        border: none;
+        outline: none;
+        height: 30px;
+        border-bottom: .8px solid rgb(88, 88, 88);
+
+    }
+}
+
+form {
+    gap: 20px;
+}
+
+form div {
+    gap: 5px;
+}
+
+button {
+    background-color: variables.$color-principal-claro;
+    border: unset;
+    border-radius: 15px;
+    height: 40px;
+    max-width: 400px;
+    align-self: center;
+    width: 90%;
+    margin:10px;
+    cursor: pointer;
+    &:disabled{
+        background-color: variables.$color-disabled;
+        margin: 10px;
+    }
+}
+ .error {
+    color: rgba(255, 0, 0, 0.63);
+ }

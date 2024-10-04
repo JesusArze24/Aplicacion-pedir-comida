@@ -1,0 +1,19 @@
+// app-tabs {
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     border-radius: 20px;
+// }
+
+.container {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+    overflow-y: scroll;
+}

@@ -1,0 +1,25 @@
+@use"../../../../assets/styles/variables.scss";
+
+$altura : 30px;
+
+#contenedor {
+    background-color: variables.$color-principal-claro;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    height: $altura;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+button {
+    border: none;
+    height: $altura;
+    background-color: variables.$color-principal;
+    font-weight: bold;
+    font-size: large;
+    padding: 0 10px;
+
+}

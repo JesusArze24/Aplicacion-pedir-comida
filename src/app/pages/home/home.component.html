@@ -1,0 +1,3 @@
+    <div id="categorias-container">
+        <app-tarjeta-categoria *ngFor="let categoria of categorias()" [categoriaInp]="categoria" [routerLink]="['/categoria', categoria.id]" routerLinkActive="router-link-active"></app-tarjeta-categoria>
+    </div>

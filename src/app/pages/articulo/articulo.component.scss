@@ -1,0 +1,89 @@
+@use"../../../assets/styles/variables.scss";
+
+.contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    img {
+        width: 92%;
+        border-radius: 20px;
+        margin: 15px 0;
+        max-height: 550px;
+        max-width: 1500px;
+        margin-top: 90px;
+    }
+}
+
+.contenedor-lista {
+    margin: 1% 4%;
+    ul li {
+        display: inline;
+        font-size: medium;
+        &:not(:last-of-type):after{
+            content: ', ';
+        }
+    }
+}
+
+.contenedor-pequeño {
+    margin: 2% 4%;
+}
+
+.apto-contenedor {
+    display: flex;
+    align-items: center;
+
+    img#vegano {
+        border: 2px solid black;
+        border-radius: 20px;
+        height: 26px;
+        margin: 3px 0;
+    }
+}
+
+.apto {
+    height: 30px;
+}
+
+.contenedor-inferior {
+    display: block;
+    margin: 2% 4%;
+}
+
+.notas {
+    display: block;
+    margin: 2% 0%;
+}
+
+.cuadro-texto {
+    width: 91vw;
+    height: 180px;
+    border-radius: 10px;
+    background-color: variables.$color-principal-claro;
+    border: none;
+    padding: 10px;
+    resize: none;
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+.cantidad-contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 4%;
+}
+
+.boton {
+    display: block;
+    margin: auto;
+    background-color: variables.$color-principal;;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 10px;
+    width: 80vw;
+    padding: 13px 0;
+    font-size: medium;
+
+}
+

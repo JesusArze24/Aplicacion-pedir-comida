@@ -1,0 +1,27 @@
+<section class="contenedor-general">
+    <form #buscarFormulario = "ngForm" (change)="buscar()">
+        <div class="barra-busqueda">
+            <img src="../../../assets/icons/lupa.svg" alt="Lupa">
+            <input type="text" name="texto" [(ngModel)]="parametrosBusqueda.texto">
+        </div>
+        <div class="contenedor-filtros">
+            <div class="apto-contenedor">
+                <img id="celiacoimg" src="../../../assets/icons/celiaco.png" alt="apto-celiaco">
+                <input type="checkbox" name="celiaco" id="celiaco" [(ngModel)]="parametrosBusqueda.aptoCeliaco">
+                <span>Apto celiaco</span>
+            </div>
+            <div class="apto-contenedor">
+                <img id="veganoimg" src="../../../assets/icons/vegano.svg" alt="apto-vegano">
+                <input type="checkbox" name="vegano" id="vegano" [(ngModel)]="parametrosBusqueda.aptoVegano">
+                <span>Apto vegano</span>
+            </div>
+        </div>
+    </form>
+    <div id="contenedor-productos" *ngIf="productos().length !== 0; else sinResultados" >
+        <app-tarjeta-producto *ngFor="let producto of productos()" [productoInp]="producto" [routerLink]="['/articulo', producto.id]"></app-tarjeta-producto>
+    </div>
+    <ng-template #sinResultados>
+        <p class="texto">Tu busqueda no arrojó ningun resultado</p>
+        <img id="emoji" src="../../../assets/icons/emoji-frown.svg" alt="Sin resultados">
+    </ng-template>
+</section>

@@ -1,0 +1,19 @@
+@use "../../../../assets/styles/variables.scss";
+
+div {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 235, 205, 0.86);
+}

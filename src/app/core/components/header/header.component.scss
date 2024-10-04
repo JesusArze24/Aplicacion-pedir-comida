@@ -1,0 +1,64 @@
+@use "../../../../assets/styles/variables.scss";
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: variables.$color-principal;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 25px 25px;
+    transition: 500ms ease-in-out;
+}
+
+
+h1 {
+    font-size: xx-large;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header::before {
+    position: absolute;
+    content: "";
+    background-image: url(../../../../assets/img/portada.jpg);
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 0 0 25px 25px;
+    transition: 500ms;
+}
+
+header.extendido::before{
+ opacity: 1;
+}
+.extendido {
+    height: 200px;
+    transition: 500ms ease-in-out;
+    background-color: unset;
+}
+
+
+.fade-in {
+    animation: fade-in 320ms ease-in;
+    animation-direction: reverse;
+}
+
+.fade-out {
+    animation: fade-out 250ms ease-in;
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0%;
+    }
+}
